@@ -23,7 +23,7 @@ propagate_configuration() {
 
 release_name="Batman"
 release_tag=""
-artifact_filename="my_common_dev_config.tar.gz"
+artifact_filename="common_configuration.tar.gz"
 current_rn=""
 
 generate_tag() {
@@ -33,21 +33,21 @@ generate_tag() {
 }
 
 generate_artifact() {
-    rm -rf /tmp/my_common_dev_config
-    cp -r ../../my_common_dev_config /tmp
+    rm -rf /tmp/common_configuration
+    cp -r ../../common_configuration /tmp
     curr_dir=$(pwd)
     cd /tmp
     # remove useless files
-    rm -f my_common_dev_config/.github_release_token
-    rm -rf my_common_dev_config/.git
-    rm -rf my_common_dev_config/.gitignore
-    rm -rf my_common_dev_config/.idea
-    tar fcz ${artifact_filename} my_common_dev_config
+    rm -f common_configuration/.github_release_token
+    rm -rf common_configuration/.git
+    rm -rf common_configuration/.gitignore
+    rm -rf common_configuration/.idea
+    tar fcz ${artifact_filename} common_configuration
     cd ${curr_dir}
 }
 
 clean_unused_files() {
-    rm -rf /tmp/my_common_dev_config
+    rm -rf /tmp/common_configuration
     #rm -f /tmp/${artifact_filename}
     mv /tmp/${artifact_filename} ~/Documents
 }
