@@ -73,7 +73,7 @@ release_to_github() {
 
     github-release upload \
         --user leowucn \
-        --repo common_dev_configuration \
+        --repo common_configuration \
         --tag ${release_tag} \
         --name "${artifact_filename}" \
         --file "/tmp/${artifact_filename}"
