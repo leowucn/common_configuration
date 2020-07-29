@@ -47,3 +47,7 @@ export PATH=$PATH:$HOME/.krew/bin
 
 # 关闭ubuntu server闪烁
 echo -n -e '\e[?17;14;224c'
+
+
+# 关闭mac自动生成.DS_store
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
