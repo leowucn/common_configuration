@@ -22,6 +22,7 @@ export ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="xiong-chiamiov-plus"
 if [[ "$OSTYPE" == "darwin"* ]]; then
     ZSH_THEME="ys"
+    ZSH_DISABLE_COMPFIX=true
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     ZSH_THEME="gnzh"
 fi
@@ -35,12 +36,8 @@ plugins=(
     z
     sudo
     autojump
-    kubetail
-    zsh-syntax-highlighting
-    zsh-autosuggestions
 )
 source ${ZSH}/oh-my-zsh.sh
-autoload -U compinit && compinit -u
 
 #--------------------------------
 export PATH=$PATH:$HOME/.krew/bin
@@ -51,3 +48,7 @@ echo -n -e '\e[?17;14;224c'
 
 # 关闭mac自动生成.DS_store
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

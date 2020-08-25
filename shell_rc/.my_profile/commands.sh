@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-autoload -Uz compinit
-compinit
-
 alias psg='ps -elf | grep'
 alias pst='ps -aef --forest'
 alias psf='ps -efww'
@@ -53,9 +50,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # 替换homebrew-core.git:
     cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
     git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
-    # 替换homebrew-cask.git:
-    cd "$(brew --repo)"/Library/Taps/homebrew/homebrew-cask
-    git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
     # 替换homebrew-bottles:
     export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
     #export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
