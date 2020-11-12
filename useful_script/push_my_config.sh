@@ -12,7 +12,6 @@ check_configuration() {
 propagate_configuration() {
     cp $HOME/.zshrc ../shell_rc
     cp $HOME/.ideavimrc ..
-    cp $HOME/.polipo ..
     cp $HOME/.my_vim/* ../vim/.my_vim
     cp $HOME/.my_profile/* ../shell_rc/.my_profile
     rm -rf ../vim/.vim
@@ -95,6 +94,6 @@ check_configuration
 propagate_configuration
 generate_tag
 generate_artifact
-release_to_github
+#release_to_github
 clean_unused_files
 git_opt
