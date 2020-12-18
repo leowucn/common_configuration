@@ -61,4 +61,4 @@ fi
 alias enable_polipo="pkill polipo; export http_proxy=http://127.0.0.1:8123; export https_proxy=https://127.0.0.1:8123; polipo >/dev/null 2>/dev/null &"
 alias disable_proxy="unset http_proxy; unset https_proxy; pkill polipo"
 
-
+rm ~/.zcompdump*
