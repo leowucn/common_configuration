@@ -31,7 +31,6 @@ alias clineall="find . -not -path './venv/*' -not -path './vendor/*'  -not -path
 
 go env -w GOPROXY=https://goproxy.cn,direct
 
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias ls='lsd'
 
