@@ -11,7 +11,6 @@ alias lla='ls -la'
 alias lt='ls --tree'
 
 
-alias ydl='youtube-dl-interactive '
 alias unzh='unar -encoding GB\ 18030 '
 alias lzd='lazydocker'
 alias pm='echo "sucg" | sudo -S purge'
@@ -22,8 +21,6 @@ alias py3='python3 '
 
 alias gitpull='git pull --rebase'
 
-alias ap='ansible-playbook'
-
 
 # 递归统计当前目录中文件的行数
 alias clinego="find . -not -path './venv/*' -not -path './vendor/*' -not -path './.git/*' -name '*.go' | xargs wc -l"
@@ -32,6 +29,7 @@ alias clinejs="find . -not -path './venv/*' -not -path './vendor/*' -not -path '
 alias clineyaml="find . -not -path './venv/*' -not -path './vendor/*' -not -path './.git/*' -name '*.yaml' | xargs wc -l"
 alias clineall="find . -not -path './venv/*' -not -path './vendor/*'  -not -path './src/vendor/*' -not -path './.git/*' -name '*.*' | xargs wc -l"
 
+go env -w GOPROXY=https://goproxy.cn,direct
 
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -57,8 +55,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     eval `dircolors ~/.dircolors.ansi-universal`
 fi
-
-alias enable_polipo="pkill polipo; export http_proxy=http://127.0.0.1:8123; export https_proxy=https://127.0.0.1:8123; polipo >/dev/null 2>/dev/null &"
-alias disable_proxy="unset http_proxy; unset https_proxy; pkill polipo"
 
 rm ~/.zcompdump*

@@ -10,8 +10,6 @@ export GO15VENDOREXPERIMENT=1
 export GO111MODULE=on
 
 #--------------------------------
-#export http_proxy=http://127.0.0.1:8123
-#export https_proxy=http://127.0.0.1:8123
 export no_proxy="10.*, 127.0.0.1, localhost, *.cnn.com, 192.168.1.10, domain.com:8080"
 
 #--------------------------------
@@ -38,9 +36,6 @@ plugins=(
     autojump
 )
 source ${ZSH}/oh-my-zsh.sh
-
-#--------------------------------
-export PATH=$PATH:$HOME/.krew/bin
 
 # 关闭ubuntu server闪烁
 echo -n -e '\e[?17;14;224c'
