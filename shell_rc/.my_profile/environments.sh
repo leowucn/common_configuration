@@ -8,6 +8,7 @@ export GOPATH=$HOME/go_work
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export GO15VENDOREXPERIMENT=1
 export GO111MODULE=on
+export PATH="$PATH:$HOME/flutter/bin"
 
 #--------------------------------
 export no_proxy="10.*, 127.0.0.1, localhost, *.cnn.com, 192.168.1.10, domain.com:8080"
