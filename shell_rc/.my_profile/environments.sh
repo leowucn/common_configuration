@@ -5,7 +5,7 @@ export LC_CTYPE=en_US.UTF-8
 #--------------------------------
 #golang
 export GOPATH=$HOME/go_work
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:/opt/homebrew/bin
 export GO15VENDOREXPERIMENT=1
 export GO111MODULE=on
 export PATH="$PATH:$HOME/flutter/bin"
