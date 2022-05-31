@@ -54,5 +54,3 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     eval `dircolors ~/.dircolors.ansi-universal`
 fi
-
-rm ~/.zcompdump*
