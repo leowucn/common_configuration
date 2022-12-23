@@ -8,7 +8,7 @@ export GOPATH=$HOME/go_work
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:/opt/homebrew/bin
 export GO15VENDOREXPERIMENT=1
 export GO111MODULE=on
-export PATH="$PATH:$HOME/flutter/bin"
+export PATH="$PATH:$HOME/flutter/bin:/opt/homebrew/bin:$HOME/.cargo/bin"
 
 #--------------------------------
 export no_proxy="10.*, 127.0.0.1, localhost, *.cnn.com, 192.168.1.10, domain.com:8080"
@@ -54,3 +54,4 @@ ulimit -S -n 10240
 
 export DOCKER_BUILDKIT=0
 export COMPOSE_DOCKER_CLI_BUILD=0
+

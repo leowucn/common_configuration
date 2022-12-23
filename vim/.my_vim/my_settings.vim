@@ -29,16 +29,7 @@ set nu
 set t_Co=256
 
 
-set background=dark
-"没有下面四行代码最终的配色效果会很奇怪
-if !has("gui_running")
-        let g:solarized_termtrans=1
-	    let g:solarized_termcolors=256
-	endif
-
-colorscheme solarized
-" colorscheme molokai
-" colorscheme dracula
+colorscheme gruvbox
 
 
 set rtp+=$GOROOT/misc/vim
@@ -100,3 +91,4 @@ set encoding=utf-8
 set clipboard=unnamed
 set rtp+=$HOME/.vim/bundle/Vundle.vim
 set mmp=5000
+

@@ -1,3 +1,4 @@
+export PATH="/opt/homebrew/bin:$PATH"
 source ~/.my_profile/environments.sh
 source ~/.my_profile/commands.sh
 # for file in ~/.my_profile/*; do source $file; done

@@ -10,14 +10,20 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
+alias rm='safe-rm'
+
+unalias g
+
 
 alias unzh='unar -encoding GB\ 18030 '
 alias lzd='lazydocker'
-alias pm='echo "sucg" | sudo -S purge'
+#alias pm='echo "sucg" | sudo -S purge'
 alias fn='find . -name'
 alias history='fc -il 1'
 alias gitrup='git stash && git rebase upstream/master && git push && git stash apply && git add .'
-alias py3='python3 '
+alias py3='python3.11 '
+alias python3='python3.11 '
+alias pip3='pip3.11 '
 
 alias gitpull='git pull --rebase'
 
@@ -33,9 +39,6 @@ go env -w GOPROXY=https://goproxy.cn,direct
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias ls='lsd'
-
-    # thefuck command
-    eval $(thefuck --alias)
 
     alias bp='brew update; brew upgrade; brew cleanup -s; brew doctor; brew missing ; rm -rf $(brew --cache)'
 
